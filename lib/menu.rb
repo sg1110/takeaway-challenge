@@ -1,8 +1,8 @@
 class Menu
-  attr_reader :food
+  attr_reader :menu_items
 
   def initialize
-    @food = { "Hot Wings" => 5.97,
+    @menu_items = { "Hot Wings" => 5.97,
         "Mozzarella Sticks" => 4.71,
         "Tex-Mex Beef Nachos" => 6.81,
         "Shrimp Poppers" => 5.45,
@@ -16,5 +16,5 @@ class Menu
 end
 
 # require './lib/menu.rb'
-# menu = Menu.new
+# cafe = Cafe.new
 # menu.show_menu
