@@ -8,6 +8,7 @@ class Order
     @prices = []
     @food_items = []
     @food_quant = []
+    @total = 0
   end
 
   def add_item(food, quantity)
@@ -16,22 +17,23 @@ class Order
      @food_items << food
      @food_quant << quantity
    end
-  #
-  # def correct_price?(price_guess)
-  #   price_guess == total
-  # end
-  #
-  # def total
-  #   order_sum.each {|price| @total += price}
-  #   return total
-  # end
-  #
-  # def order_summary
-  # end
+
+
+  def order_summary
+    l = food_items.length
+
+    while l >= 0 do
+      print  "#{food_quant[l]}x #{food_items[l]}, "
+      l-=1
+    end
+
+  end
+
 
 end
 
 
 # require './lib/cafe.rb'
 # cafe=Cafe.new
-# cafe.add_to_order("Coke",3)
+# cafe.add("Coke",3)
+# cafe.add("Tea",2)

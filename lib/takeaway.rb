@@ -1,12 +1,11 @@
 require_relative 'menu'
 require_relative 'order'
 
-class Cafe
+class Takeaway
   attr_reader :order
 
   def initialize
     @order = Order.new
-    # @menu = Menu.new
   end
 
   def show_menu
@@ -20,6 +19,9 @@ class Cafe
   def checkout(total)
   end
 
+  def summary
+    order.order_summary
+  end
 
 end
 

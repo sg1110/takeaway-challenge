@@ -1,6 +1,6 @@
-require 'cafe'
+require 'takeaway'
 
-describe Cafe do
+describe Takeaway do
   let(:menu)  { double :menu_class, menu_items:{ "Hot Wings" => 5.97,
       "Mozzarella Sticks" => 4.71,
       "Tex-Mex Beef Nachos" => 6.81,
@@ -27,8 +27,8 @@ describe Cafe do
 
   describe '#add_to_order' do
     it 'should allow customer to add a food item to their order' do
-      subject.add_to_order("Coke", 1)
-      expect(subject.order.food_on_order_price).to include 1.00
+      subject.add("Coke", 1)
+      expect(subject.order.prices).to include 1.00
     end
   end
 
