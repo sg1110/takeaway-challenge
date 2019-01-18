@@ -14,7 +14,3 @@ class Menu
         "Coke" => 1.00 }
   end
 end
-
-# require './lib/menu.rb'
-# cafe = Cafe.new
-# menu.show_menu
