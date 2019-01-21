@@ -16,29 +16,17 @@ class Takeaway
     order.add_item(food,quantity)
   end
 
-  def checkout(total)
-  end
-
   def summary
     order.order_summary
   end
 
+  def total
+    order.to_pay
+  end
+
+  def checkout(guess)
+   if guess == total
+  end
+
 end
-
-#   def food_order(food)
-#     show_menu
-#     select_item(food)
-#
-#   end
-#
-# end
-
-# require './lib/menu.rb'
-# cafe = Cafe.new
-
-# cafe.ordering_food
-#   show_menu
-#   select_item     until finished.......
-#   cafe.order.order_check
-#   cafe.order.dispatch_message
-# end of odering_food
+end

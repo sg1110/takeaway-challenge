@@ -25,7 +25,7 @@ describe Takeaway do
     end
   end
 
-  describe '#add_to_order' do
+  describe '#add' do
     it 'should allow customer to add a food item to their order' do
       subject.add("Coke", 1)
       expect(subject.order.prices).to include 1.00
